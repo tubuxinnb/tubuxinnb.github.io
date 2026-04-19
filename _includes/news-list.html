@@ -1,0 +1,17 @@
+{% assign limit = include.limit | default: site.home.news_limit %}
+
+<ul class="news-list">
+  {% for item in site.data.news %}
+    {% if forloop.index <= limit %}
+      <li class="news-list__item">
+        <div class="news-list__date">{{ item.date }}</div>
+        <div class="news-list__content">
+          <p class="news-list__title">{{ item.title }}</p>
+          {% if item.details %}
+            <p class="news-list__details">{{ item.details }}</p>
+          {% endif %}
+        </div>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

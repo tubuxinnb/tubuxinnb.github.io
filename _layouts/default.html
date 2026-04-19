@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang }}">
+  {% include head.html %}
+  <body class="mode-{{ site.style_mode }} font-{{ site.font_style }}{% if site.show.dark_mode %} dark-enabled{% endif %}">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <div class="page-shell">
+      {% include site-header.html %}
+      <main id="content" class="site-main">
+        {{ content }}
+      </main>
+      {% include site-footer.html %}
+    </div>
+  </body>
+</html>

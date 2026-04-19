@@ -1,0 +1,38 @@
+# Mixed academic experience and education entries for the homepage and CV page.
+- section: "Education"
+  title: "PhD in Computer Science"
+  organization: "Redwood University"
+  location: "Redwood City, CA"
+  period: "2025-present"
+  home_featured: true
+  bullets:
+    - "Research focus: natural language processing, human-centered AI, and efficient learning."
+    - "Advisor: Prof. Mira Lawson."
+
+- section: "Education"
+  title: "BS in Computer Science and Mathematics"
+  organization: "Lakeside University"
+  location: "Seattle, WA"
+  period: "2021-2025"
+  home_featured: false
+  bullets:
+    - "Graduated summa cum laude."
+    - "Undergraduate thesis on robust long-document reasoning."
+
+- section: "Experience"
+  title: "Research Intern"
+  organization: "Northshore Research"
+  location: "Remote"
+  period: "Spring 2026"
+  home_featured: true
+  bullets:
+    - "Worked on evaluation methods for interactive language systems."
+
+- section: "Experience"
+  title: "Student Researcher"
+  organization: "Redwood AI Lab"
+  location: "Redwood City, CA"
+  period: "2025-present"
+  home_featured: true
+  bullets:
+    - "Built benchmarks and model analysis tools for language technology."

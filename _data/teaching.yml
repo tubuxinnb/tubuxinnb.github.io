@@ -1,0 +1,18 @@
+# Teaching, mentoring, and service. Keep this page optional with `show.teaching`.
+- type: "Teaching"
+  title: "Teaching Assistant, Natural Language Processing"
+  organization: "Redwood University"
+  period: "Winter 2026"
+  notes: "Led discussion sections and held weekly office hours for graduate students."
+
+- type: "Teaching"
+  title: "Guest Lecture, Human-Centered Evaluation for LMs"
+  organization: "Redwood University"
+  period: "Spring 2026"
+  notes: "Prepared a lecture on evaluation design, annotation protocols, and failure analysis."
+
+- type: "Service"
+  title: "Student Volunteer"
+  organization: "ACL 2025"
+  period: "2025"
+  notes: "Supported registration and workshop logistics."

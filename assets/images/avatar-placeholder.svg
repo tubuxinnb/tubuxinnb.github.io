@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder profile portrait</title>
+  <desc id="desc">A minimal placeholder avatar with the initials A C.</desc>
+  <rect width="320" height="320" fill="#f4f1ec"/>
+  <circle cx="160" cy="118" r="54" fill="#dcd8d1"/>
+  <path d="M78 252c19-49 57-74 82-74s63 25 82 74" fill="#dcd8d1"/>
+  <text x="160" y="292" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#6f7c8b">A C</text>
+</svg>

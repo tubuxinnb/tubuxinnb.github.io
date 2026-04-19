@@ -1,0 +1,15 @@
+{% if site.social_links and site.social_links.size > 0 %}
+  <ul class="social-links" aria-label="Profile links">
+    {% for link in site.social_links %}
+      {% if link.url and link.url != "" %}
+        {% assign link_href = link.url %}
+        {% unless link.url contains "://" %}
+          {% assign link_href = link.url | relative_url %}
+        {% endunless %}
+        <li class="social-links__item">
+          <a href="{{ link_href }}">{{ link.label }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Academic homepage Open Graph card</title>
+  <desc id="desc">A minimal card with name, title, and research interests.</desc>
+  <rect width="1200" height="630" fill="#fbfbfa"/>
+  <rect x="84" y="84" width="1032" height="462" fill="#ffffff" stroke="#e5e3de"/>
+  <text x="140" y="224" font-family="Georgia, serif" font-size="72" fill="#20201e">Alex Chen</text>
+  <text x="140" y="288" font-family="Georgia, serif" font-size="32" fill="#5f5f59">PhD Student in Computer Science</text>
+  <text x="140" y="374" font-family="Georgia, serif" font-size="28" fill="#6f7c8b">Natural language processing · Human-centered AI · Efficient learning</text>
+</svg>

@@ -1,0 +1,26 @@
+# Navigation labels and order live here so they can be adjusted without touching templates.
+- key: home
+  label: Home
+  url: /
+
+- key: publications
+  label: Publications
+  url: /publications/
+
+- key: projects
+  label: Projects
+  url: /projects/
+  feature_flag: projects
+
+- key: cv
+  label: CV
+  url: /cv/
+
+- key: teaching
+  label: Teaching
+  url: /teaching/
+  feature_flag: teaching
+
+- key: contact
+  label: Contact
+  url: /contact/

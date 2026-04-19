@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+{% assign selected_publications = site.data.publications | where: "selected", true %}
+{% assign featured_projects = site.data.projects | where: "featured", true %}
+{% assign home_experience = site.data.experience | where: "home_featured", true %}
+
+<section class="hero">
+  <div class="hero__content">
+    <p class="eyebrow">{{ site.author.position }}</p>
+    <h1 class="hero__name">{{ site.author.name }}</h1>
+    <p class="hero__affiliation">{{ site.author.department }}, {{ site.author.affiliation }}</p>
+    <p class="hero__summary">{{ site.author.short_bio }}</p>
+    <p class="hero__meta">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      {% if site.author.location %}
+        <span class="dot-separator">·</span>
+        <span>{{ site.author.location }}</span>
+      {% endif %}
+    </p>
+    {% include social-links.html %}
+  </div>
+
+  {% if site.show.profile_photo %}
+    <div class="hero__photo">
+      <img src="{{ site.avatar | relative_url }}" alt="Profile photo for {{ site.author.name }}">
+    </div>
+  {% endif %}
+</section>
+
+<section class="section-block">
+  <h2>Research interests</h2>
+  <ul class="interest-list" aria-label="Research interests">
+    {% for interest in site.author.research_interests %}
+      <li>{{ interest }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section-block">
+  <h2>About</h2>
+  <div class="prose">
+    {{ content }}
+  </div>
+</section>
+
+{% if site.show.news and site.data.news.size > 0 %}
+  <section class="section-block">
+    <div class="section-block__header">
+      <h2>News</h2>
+    </div>
+    {% include news-list.html limit=site.home.news_limit %}
+  </section>
+{% endif %}
+
+{% if site.show.selected_publications_on_home and selected_publications.size > 0 %}
+  <section class="section-block">
+    <div class="section-block__header">
+      <h2>Selected publications</h2>
+      <a href="{{ '/publications/' | relative_url }}">View all</a>
+    </div>
+    {% assign home_selected = selected_publications | slice: 0, site.home.selected_publications_limit %}
+    {% include publication-list.html items=home_selected show_abstracts=site.show.publication_abstracts compact=true %}
+  </section>
+{% endif %}
+
+{% if site.show.projects and featured_projects.size > 0 %}
+  <section class="section-block">
+    <div class="section-block__header">
+      <h2>Projects</h2>
+      <a href="{{ '/projects/' | relative_url }}">View all</a>
+    </div>
+    {% assign home_projects = featured_projects | slice: 0, site.home.project_limit %}
+    {% include project-list.html items=home_projects %}
+  </section>
+{% endif %}
+
+{% if site.show.experience and home_experience.size > 0 %}
+  <section class="section-block">
+    <h2>Education and experience</h2>
+    {% include experience-list.html items=home_experience %}
+  </section>
+{% endif %}

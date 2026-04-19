@@ -1,0 +1,23 @@
+{% assign items = include.items | default: site.data.experience %}
+
+<div class="item-list">
+  {% for item in items %}
+    <article class="item-card">
+      <header class="item-card__header">
+        <div>
+          <p class="eyebrow">{{ item.section }}</p>
+          <h3 class="item-card__title">{{ item.title }}</h3>
+        </div>
+        <p class="item-card__meta">{{ item.period }}</p>
+      </header>
+      <p class="item-card__subtle">{{ item.organization }}{% if item.location %}, {{ item.location }}{% endif %}</p>
+      {% if item.bullets %}
+        <ul class="content-list">
+          {% for bullet in item.bullets %}
+            <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>

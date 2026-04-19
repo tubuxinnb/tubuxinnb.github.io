@@ -1,0 +1,32 @@
+{% assign projects = include.items | default: site.data.projects %}
+
+<div class="item-list">
+  {% for project in projects %}
+    <article class="item-card">
+      <header class="item-card__header">
+        <h3 class="item-card__title">{{ project.title }}</h3>
+        {% if project.period %}
+          <p class="item-card__meta">{{ project.period }}</p>
+        {% endif %}
+      </header>
+      {% if project.role %}
+        <p class="item-card__subtle">{{ project.role }}</p>
+      {% endif %}
+      <p>{{ project.summary }}</p>
+      {% if project.tags %}
+        <ul class="tag-list" aria-label="Project tags">
+          {% for tag in project.tags %}
+            <li>{{ tag }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if project.links %}
+        <p class="item-links">
+          {% for link in project.links %}
+            <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span class="dot-separator">·</span>{% endunless %}
+          {% endfor %}
+        </p>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>

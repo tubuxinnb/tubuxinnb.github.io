@@ -1,0 +1,19 @@
+{% assign items = include.items | default: site.data.teaching %}
+
+<div class="item-list">
+  {% for item in items %}
+    <article class="item-card">
+      <header class="item-card__header">
+        <div>
+          <p class="eyebrow">{{ item.type }}</p>
+          <h3 class="item-card__title">{{ item.title }}</h3>
+        </div>
+        <p class="item-card__meta">{{ item.period }}</p>
+      </header>
+      <p class="item-card__subtle">{{ item.organization }}</p>
+      {% if item.notes %}
+        <p>{{ item.notes }}</p>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>
