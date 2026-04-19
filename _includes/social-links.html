@@ -3,7 +3,15 @@
     {% for link in site.social_links %}
       {% if link.url and link.url != "" %}
         {% assign link_href = link.url %}
-        {% unless link.url contains "://" %}
+        {% assign first_char = link.url | slice: 0, 1 %}
+        {% assign first_two = link.url | slice: 0, 2 %}
+        {% assign first_segment = link.url | split: '/' | first %}
+        {% assign has_scheme = false %}
+        {% if first_segment contains ":" %}
+          {% assign has_scheme = true %}
+        {% endif %}
+        {% comment %}Only site-local paths should be rewritten for baseurl support.{% endcomment %}
+        {% unless has_scheme or first_two == "//" or first_char == "#" %}
           {% assign link_href = link.url | relative_url %}
         {% endunless %}
         <li class="social-links__item">

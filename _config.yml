@@ -1,7 +1,8 @@
 # Core site settings. Most of the content and style switches can be edited here.
 title: "Alex Chen"
 description: "Academic homepage of Alex Chen, a PhD student in Computer Science working on machine learning and language technologies."
-url: "https://example.com"
+# Leave blank in the template. Set this to your final site URL before publishing.
+url: ""
 baseurl: ""
 lang: "en"
 timezone: "America/Los_Angeles"

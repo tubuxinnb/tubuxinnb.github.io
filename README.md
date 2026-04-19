@@ -97,10 +97,10 @@ This repository includes `.github/workflows/pages.yml`, which deploys through Gi
 1. Push the repository to GitHub.
 2. In the repository settings, open `Pages`.
 3. Set the source to `GitHub Actions`.
-4. If you use a custom domain, add a `CNAME` file at the repo root and configure DNS.
-5. Update `url` in `_config.yml` to your final site URL.
+4. If you use a custom domain, set it in the repository `Pages` settings and configure DNS with your domain provider.
+5. Update `url` in `_config.yml` to your final site URL before publishing the site publicly.
 
-The workflow builds the site with Bundler and deploys the `_site` output through the official Pages actions.
+The workflow builds the site with Bundler and deploys the `_site` output through the official Pages actions. Because this scaffold publishes through GitHub Actions, a tracked `CNAME` file is not required.
 
 ## Files To Edit For Future Customization
 
@@ -187,7 +187,7 @@ Suggested pairings:
 3. Replace the sample entries in `_data/publications.yml`, `_data/projects.yml`, `_data/news.yml`, `_data/experience.yml`, and `_data/teaching.yml`.
 4. Update the homepage text in `index.md`.
 5. Replace the sample Open Graph image in `assets/images/og-card.svg`.
-6. If you use a custom domain, add a `CNAME` file and configure DNS.
+6. If you use a custom domain, configure it in the repository `Pages` settings and add the matching DNS records with your domain provider.
 7. Optionally replace the `CV` social link with a PDF URL when you upload your final CV.
 
 ## Notes
