@@ -1,18 +1,25 @@
 ---
 title: Contact
-intro: "Contact details, collaboration interests, and a few practical notes."
+intro: "Contact details and a few practical notes."
 ---
 
-I am usually happy to hear about research collaborations related to language technology, evaluation, and human-centered AI.
+I am happy to connect about LLM systems, computer architecture, and related projects.
 
 ## Contact
 
-- Email: [{{ site.email }}](mailto:{{ site.email }})
+- Email: [{{ site.email | replace: "@", "_AT_" }}](mailto:{{ site.email }})
+{% if site.author.department and site.author.department != "" and site.author.affiliation and site.author.affiliation != "" %}
 - Affiliation: {{ site.author.department }}, {{ site.author.affiliation }}
+{% elsif site.author.department and site.author.department != "" %}
+- Affiliation: {{ site.author.department }}
+{% elsif site.author.affiliation and site.author.affiliation != "" %}
+- Affiliation: {{ site.author.affiliation }}
+{% endif %}
+{% if site.author.location and site.author.location != "" %}
 - Location: {{ site.author.location }}
+{% endif %}
 
 ## Practical notes
 
 - The fastest way to reach me is by email.
-- Please include context if you are writing about a paper, project, or course.
-- For student collaboration inquiries, a short note about background and interests is helpful.
+- Please include a short note about the topic you want to discuss.

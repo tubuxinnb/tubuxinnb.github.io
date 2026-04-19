@@ -1,87 +1,19 @@
 # Keep publications in reverse-chronological order.
 # `selected: true` controls the homepage list.
-- title: "Preference Signals for Helpful and Grounded Dialogue in Low-Resource Settings"
-  authors: "Alex Chen, Priya Raman, and Mira Lawson"
-  venue: "NAACL"
-  year: 2026
-  paper_link: "https://example.com/papers/preference-signals.pdf"
-  code_link: "https://github.com/alexchen/preference-signals"
-  project_link: "https://example.com/projects/preference-signals"
-  bibtex: |
-    @inproceedings{chen2026preference,
-      title={Preference Signals for Helpful and Grounded Dialogue in Low-Resource Settings},
-      author={Chen, Alex and Raman, Priya and Lawson, Mira},
-      booktitle={Proceedings of NAACL},
-      year={2026}
-    }
-  abstract: "We study how sparse human preference labels can improve dialogue quality when supervised data is limited, and show gains in helpfulness without harming factual grounding."
-  tags:
-    - Dialogue
-    - Preference learning
-    - Low-resource NLP
-  highlight: true
-  selected: true
-
-- title: "Human-Centered Feedback Loops for Language Model Evaluation"
-  authors: "Alex Chen and Mira Lawson"
-  venue: "Findings of EMNLP"
+- title: "NDPage: Efficient Address Translation for Near-Data Processing Architectures via Tailored Page Table"
+  authors: "Qingcai Jiang*, Buxin Tu*, and Hong An"
+  venue: "DATE 2025. The 28th Design, Automation and Test in Europe Conference"
   year: 2025
-  paper_link: "https://example.com/papers/human-centered-feedback.pdf"
-  code_link: "https://github.com/alexchen/human-centered-feedback"
-  project_link: ""
-  bibtex: |
-    @inproceedings{chen2025feedback,
-      title={Human-Centered Feedback Loops for Language Model Evaluation},
-      author={Chen, Alex and Lawson, Mira},
-      booktitle={Findings of EMNLP},
-      year={2025}
-    }
-  abstract: "This paper proposes a lightweight evaluation workflow that combines expert annotations and structured user critiques to surface failure modes earlier in model development."
-  tags:
-    - Evaluation
-    - Human-centered AI
-  highlight: false
-  selected: true
-
-- title: "Grounded Explanation Benchmarks for Scientific Reading Assistants"
-  authors: "Priya Raman, Alex Chen, and Jordan Lee"
-  venue: "ACL Workshop on Scholarly Document Processing"
-  year: 2025
-  paper_link: "https://example.com/papers/scientific-reading.pdf"
-  code_link: "https://github.com/alexchen/scientific-reading-benchmark"
-  project_link: "https://example.com/projects/scientific-reading"
-  bibtex: |
-    @inproceedings{raman2025grounded,
-      title={Grounded Explanation Benchmarks for Scientific Reading Assistants},
-      author={Raman, Priya and Chen, Alex and Lee, Jordan},
-      booktitle={ACL Workshop on Scholarly Document Processing},
-      year={2025}
-    }
-  abstract: "We introduce a benchmark for assistant systems that answer questions over scientific papers while citing evidence and preserving uncertainty."
-  tags:
-    - Benchmarks
-    - Retrieval
-    - Scientific NLP
-  highlight: true
-  selected: true
-
-- title: "Compact Student Models for Document-Level Entailment"
-  authors: "Alex Chen, Elena Morozova, and Mira Lawson"
-  venue: "EMNLP"
-  year: 2024
-  paper_link: "https://example.com/papers/document-entailment.pdf"
+  paper_link: "/assets/files/NDPage.pdf"
   code_link: ""
-  project_link: ""
-  bibtex: |
-    @inproceedings{chen2024compact,
-      title={Compact Student Models for Document-Level Entailment},
-      author={Chen, Alex and Morozova, Elena and Lawson, Mira},
-      booktitle={Proceedings of EMNLP},
-      year={2024}
-    }
-  abstract: "We present a distillation recipe for document-level entailment that preserves accuracy while reducing inference cost."
-  tags:
-    - Efficiency
-    - Entailment
-  highlight: false
-  selected: false
+  ppt_link: ""
+  selected: true
+
+- title: "NDFT: Accelerating Density Functional Theory Calculations via Hardware/Software Co-Design on Near-Data Computing System"
+  authors: "Qingcai Jiang*, Buxin Tu*, Xiaoyu Hao, Junshi Chen, and Hong An"
+  venue: "DAC 2025. The 62nd Design Automation Conference"
+  year: 2025
+  paper_link: "/assets/files/NDFT.pdf"
+  code_link: ""
+  ppt_link: ""
+  selected: true

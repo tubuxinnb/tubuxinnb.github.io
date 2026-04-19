@@ -1,11 +1,27 @@
 ---
 title: CV
-intro: "A concise academic CV. You can replace this page with a PDF link later if you prefer."
+intro: "A concise CV page. A PDF version can be added later."
 ---
 
-## Current position
+## Current affiliation
 
-PhD student in Computer Science at Redwood University.
+{% if site.author.department and site.author.department != "" and site.author.affiliation and site.author.affiliation != "" %}
+{{ site.author.department }}, {{ site.author.affiliation }}.
+{% elsif site.author.department and site.author.department != "" %}
+{{ site.author.department }}.
+{% elsif site.author.affiliation and site.author.affiliation != "" %}
+{{ site.author.affiliation }}.
+{% else %}
+<p class="empty-state">Affiliation details will be added soon.</p>
+{% endif %}
+
+{% if site.author.position and site.author.position != "" %}
+Current role: {{ site.author.position }}.
+{% endif %}
+
+{% if site.author.advisor and site.author.advisor != "" %}
+{{ site.author.advisor }}.
+{% endif %}
 
 ## Research interests
 
@@ -13,11 +29,28 @@ PhD student in Computer Science at Redwood University.
 - {{ interest }}
 {% endfor %}
 
-## Education and experience
+## Education and Experience
 
-{% include experience-list.html items=site.data.experience %}
+{% assign education_items = site.data.education %}
+{% assign experience_items = site.data.experience %}
 
-{% if site.show.teaching %}
+{% if education_items.size > 0 or experience_items.size > 0 %}
+{% if education_items.size > 0 %}
+### Education
+
+{% include experience-list.html items=education_items show_section=false %}
+{% endif %}
+
+{% if experience_items.size > 0 %}
+### Experience
+
+{% include experience-list.html items=experience_items show_section=false %}
+{% endif %}
+{% else %}
+<p class="empty-state">Education and Experience details will be added soon.</p>
+{% endif %}
+
+{% if site.show.teaching and site.data.teaching.size > 0 %}
 ## Teaching and service
 
 {% include teaching-list.html items=site.data.teaching %}
@@ -25,6 +58,14 @@ PhD student in Computer Science at Redwood University.
 
 ## Contact
 
-- Email: [{{ site.email }}](mailto:{{ site.email }})
+- Email: [{{ site.email | replace: "@", "_AT_" }}](mailto:{{ site.email }})
+{% if site.author.department and site.author.department != "" and site.author.affiliation and site.author.affiliation != "" %}
 - Affiliation: {{ site.author.department }}, {{ site.author.affiliation }}
+{% elsif site.author.department and site.author.department != "" %}
+- Affiliation: {{ site.author.department }}
+{% elsif site.author.affiliation and site.author.affiliation != "" %}
+- Affiliation: {{ site.author.affiliation }}
+{% endif %}
+{% if site.author.location and site.author.location != "" %}
 - Location: {{ site.author.location }}
+{% endif %}

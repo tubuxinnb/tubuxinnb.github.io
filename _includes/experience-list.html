@@ -1,16 +1,27 @@
 {% assign items = include.items | default: site.data.experience %}
+{% assign show_section = true %}
+{% if include.show_section == false or include.show_section == "false" %}
+  {% assign show_section = false %}
+{% endif %}
 
 <div class="item-list">
   {% for item in items %}
+    {% assign item_title = item.title | default: item.section %}
     <article class="item-card">
       <header class="item-card__header">
         <div>
-          <p class="eyebrow">{{ item.section }}</p>
-          <h3 class="item-card__title">{{ item.title }}</h3>
+          {% if show_section and item.section and item.section != "" %}
+            <p class="eyebrow">{{ item.section }}</p>
+          {% endif %}
+          <h3 class="item-card__title">{{ item_title }}</h3>
         </div>
         <p class="item-card__meta">{{ item.period }}</p>
       </header>
-      <p class="item-card__subtle">{{ item.organization }}{% if item.location %}, {{ item.location }}{% endif %}</p>
+      {% if item.organization or item.location %}
+        <p class="item-card__subtle">
+          {% if item.organization %}{{ item.organization }}{% endif %}{% if item.organization and item.location and item.location != "" %}, {% endif %}{% if item.location and item.location != "" %}{{ item.location }}{% endif %}
+        </p>
+      {% endif %}
       {% if item.bullets %}
         <ul class="content-list">
           {% for bullet in item.bullets %}

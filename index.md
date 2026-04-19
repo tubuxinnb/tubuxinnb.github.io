@@ -4,8 +4,8 @@ title: Home
 permalink: /
 ---
 
-I am a PhD student in the Department of Computer Science at Redwood University, where I work with Prof. Mira Lawson in the Redwood AI Lab. My research focuses on language technologies that are useful, reliable, and understandable to people who rely on them in practice.
+Now I am an M.S. student in Computer Science at the University of Science and Technology of China (**USTC**), where I am advised by **Dr. Hong An.** 
+My research has focused on computer architecture, including Hardware/Software co-design for HPC workloads and memory systems.
 
-Before starting my PhD, I studied computer science and mathematics at Lakeside University. I enjoy working on problems that sit between model design, evaluation, and human use: how we define success, how we identify failure modes, and how we build systems that remain careful under real constraints.
-
-This site collects publications, ongoing projects, teaching, and a brief academic CV. The structure is intentionally lightweight so that it is easy to maintain as research evolves.
+In particular, I have been working on near-data processing systems and address translation mechanisms, including address translation designs for NDP architectures and NDP-based co-designs for accelerating density functional theory workloads.
+Looking ahead, I am exploring LLM systems and LLM for computer architecture, including how LLM-based methods can support architecture research in practice.

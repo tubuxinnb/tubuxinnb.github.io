@@ -1,20 +1,2 @@
 # Short updates for the homepage. Keep entries brief and chronological.
-- date: "2026-04"
-  title: "Presented a paper at NAACL 2026"
-  details: "Gave a talk on efficient preference modeling for low-resource dialogue systems."
-
-- date: "2026-02"
-  title: "Started a research internship"
-  details: "Joined the Language and Interaction group at Northshore Research for a spring collaboration."
-
-- date: "2025-11"
-  title: "Released a small benchmark"
-  details: "Published an evaluation set for grounded long-form explanation tasks."
-
-- date: "2025-09"
-  title: "Paper accepted to EMNLP Findings"
-  details: "Our work on human-centered model feedback was accepted to Findings of EMNLP."
-
-- date: "2025-08"
-  title: "Began PhD at Redwood University"
-  details: "Joined the Redwood AI Lab and started working with Prof. Mira Lawson."
+[]

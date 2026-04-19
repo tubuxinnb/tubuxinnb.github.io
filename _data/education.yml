@@ -1,0 +1,20 @@
+- section: "Education"
+  title: "M.S. in Computer Science and Technology"
+  organization: "University of Science and Technology of China (USTC)"
+  location: "Hefei, China"
+  period: "Sep 2023 - Jun 2026"
+  home_featured: true
+  bullets:
+    - "Average grade: 82.3/100."
+    - "Advisor: Dr. Hong An."
+    - "First-Class Academic Scholarship."
+
+- section: "Education"
+  title: "B.E. in Software Engineering"
+  organization: "University of Electronic Science and Technology of China (UESTC)"
+  location: "Chengdu, China"
+  period: "Sep 2019 - Jun 2023"
+  home_featured: true
+  bullets:
+    - "GPA: 3.81/4.0."
+    - "Advisor: Dr. Liao Yong."

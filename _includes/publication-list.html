@@ -7,7 +7,9 @@
 
 <ol class="publication-list{% if compact %} publication-list--compact{% endif %}">
   {% for publication in publications %}
-    <li class="publication{% if publication.highlight %} publication--highlight{% endif %}">
+    {% assign highlighted_name = '<strong>' | append: site.author.name | append: '</strong>' %}
+    {% assign authors_display = publication.authors | replace: site.author.name, highlighted_name %}
+    <li class="publication">
       <article>
         <h3 class="publication__title">
           {% if publication.paper_link %}
@@ -16,36 +18,17 @@
             {{ publication.title }}
           {% endif %}
         </h3>
-        <p class="publication__authors">{{ publication.authors }}</p>
+        <p class="publication__authors">{{ authors_display }}</p>
         <p class="publication__venue">
           <span>{{ publication.venue }}</span>
-          <span class="dot-separator">·</span>
-          <span>{{ publication.year }}</span>
         </p>
-        {% if publication.tags %}
-          <ul class="tag-list" aria-label="Publication tags">
-            {% for tag in publication.tags %}
-              <li>{{ tag }}</li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-        {% if publication.paper_link or publication.code_link or publication.project_link %}
+        {% if publication.ppt_link %}
           <p class="item-links">
-            {% if publication.paper_link %}<a href="{{ publication.paper_link }}">Paper</a>{% endif %}
-            {% if publication.code_link %}{% if publication.paper_link %}<span class="dot-separator">·</span>{% endif %}<a href="{{ publication.code_link }}">Code</a>{% endif %}
-            {% if publication.project_link %}{% if publication.paper_link or publication.code_link %}<span class="dot-separator">·</span>{% endif %}<a href="{{ publication.project_link }}">Project</a>{% endif %}
+            {% if publication.ppt_link %}<a href="{{ publication.ppt_link }}">Slide</a>{% endif %}
           </p>
-        {% endif %}
-        {% if show_abstracts and publication.abstract %}
-          <p class="publication__abstract">{{ publication.abstract }}</p>
-        {% endif %}
-        {% if publication.bibtex %}
-          <details class="publication__details">
-            <summary>BibTeX</summary>
-            <pre><code>{{ publication.bibtex | escape }}</code></pre>
-          </details>
         {% endif %}
       </article>
     </li>
   {% endfor %}
 </ol>
+<p class="publication-note">* equal contribution.</p>

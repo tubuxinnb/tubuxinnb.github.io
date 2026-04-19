@@ -1,38 +1,38 @@
 # Core site settings. Most of the content and style switches can be edited here.
-title: "Alex Chen"
-description: "Academic homepage of Alex Chen, a PhD student in Computer Science working on machine learning and language technologies."
+title: "Buxin Tu"
+description: "Personal homepage of Buxin Tu at the University of Science and Technology of China."
 # Leave blank in the template. Set this to your final site URL before publishing.
 url: ""
 baseurl: ""
 lang: "en"
-timezone: "America/Los_Angeles"
+timezone: "Asia/Shanghai"
 repository: "tubuxinnb/buxin.github.io"
-email: "alex.chen@redwood.edu"
+email: "tubuxin0621@gmail.com"
 
 author:
-  name: "Alex Chen"
-  position: "PhD Student in Computer Science"
-  affiliation: "Redwood University"
-  department: "Department of Computer Science"
-  advisor: "Advised by Prof. Mira Lawson"
-  location: "Redwood City, California"
-  short_bio: "I study natural language processing, human-centered AI, and efficient machine learning systems."
-  bio: "I am a PhD student in Computer Science at Redwood University. My research sits at the intersection of language, learning, and human-centered AI. I am especially interested in building methods that are reliable, interpretable, and useful in real settings."
+  name: "Buxin Tu"
+  position: "M.S. Student in Computer Science and Technology"
+  affiliation: "University of Science and Technology of China"
+  department: "School of Computer Science and Technology"
+  advisor: "Advisor: Dr. Hong An"
+  location: ""
+  short_bio: ""
+  bio: "I am Buxin Tu, an M.S. student in Computer Science and Technology at the University of Science and Technology of China, advised by Dr. Hong An. My work focuses on computer architecture and high-performance computing, and I am also interested in LLM systems and the use of LLMs for architecture research."
   research_interests:
-    - Natural language processing
-    - Human-centered AI
-    - Efficient machine learning
-    - Evaluation and interpretability
+    - Memory Systems
+    - LLM for Arch
+    - Near-Data Processing
+    - LLM systems
 
 # Visual tuning. The CSS reads these values and applies one of three calibrated modes.
 style_mode: "piech" # piech / hewitt / bingyao
-font_style: "serif" # serif / sans / mixed
+font_style: "sans" # serif / sans / mixed
 accent_color: "#6f7c8b"
 
 show:
-  news: true
-  projects: true
-  teaching: true
+  news: false
+  projects: false
+  teaching: false
   profile_photo: true
   publication_abstracts: false
   selected_publications_on_home: true
@@ -44,26 +44,23 @@ home:
   selected_publications_limit: 3
   project_limit: 2
 
-avatar: "/assets/images/avatar-placeholder.svg"
-logo: "/assets/images/avatar-placeholder.svg"
+avatar: "/assets/images/Buxin.jpeg"
+logo: "/assets/images/Buxin.jpeg"
 image: "/assets/images/og-card.svg"
 default_social_image: "/assets/images/og-card.svg"
-footer_text: "© 2026 Alex Chen. Built with Jekyll and GitHub Pages."
+footer_text: "© 2026 Buxin Tu. Built with Codex and GitHub Pages."
 
 # Keep this list ordered; it is rendered directly in the homepage header.
 social_links:
-  - label: "Scholar"
-    url: "https://scholar.google.com/"
-  - label: "Semantic Scholar"
-    url: "https://www.semanticscholar.org/"
   - label: "GitHub"
-    url: "https://github.com/alexchen"
-  - label: "ORCID"
-    url: "https://orcid.org/"
-  - label: "CV"
-    url: "/cv/"
-  - label: "X"
-    url: "https://x.com/"
+    icon: "github"
+    url: "https://github.com/tubuxinnb"
+  # Add your Google Scholar profile URL here later.
+  # - label: "Google Scholar"
+  #   url: ""
+  # Add X later if you want it to appear in the header.
+  # - label: "X"
+  #   url: ""
 
 markdown: kramdown
 permalink: pretty

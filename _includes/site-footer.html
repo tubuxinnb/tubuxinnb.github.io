@@ -1,6 +1,6 @@
 <footer class="site-footer">
   <p>{{ site.footer_text }}</p>
   <p>
-    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    <a href="mailto:{{ site.email }}">{{ site.email | replace: "@", "_AT_" }}</a>
   </p>
 </footer>
