@@ -14,10 +14,10 @@ author:
   position: "M.S. Student in Computer Science and Technology"
   affiliation: "University of Science and Technology of China"
   department: "School of Computer Science and Technology"
-  advisor: "Advisor: Dr. Hong An"
+  advisor: "Advisor: Prof. Hong An"
   location: ""
   short_bio: ""
-  bio: "I am Buxin Tu, an M.S. student in Computer Science and Technology at the University of Science and Technology of China, advised by Dr. Hong An. My work focuses on computer architecture and high-performance computing, and I am also interested in LLM systems and the use of LLMs for architecture research."
+  bio: "I am Buxin Tu, an M.S. student in Computer Science and Technology at the University of Science and Technology of China, advised by Prof. Hong An. My work focuses on computer architecture and high-performance computing, and I am also interested in LLM systems and the use of LLMs for architecture research."
   research_interests:
     - Memory Systems
     - LLM for Arch
