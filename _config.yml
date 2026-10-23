@@ -1,23 +1,24 @@
 # Core site settings. Most of the content and style switches can be edited here.
 title: "Buxin Tu"
-description: "Personal homepage of Buxin Tu at the University of Science and Technology of China."
-# Leave blank in the template. Set this to your final site URL before publishing.
-url: ""
+# Shown after the name in the homepage <title>: "Buxin Tu | <tagline>".
+tagline: "Ph.D. Student at the University of Pittsburgh"
+description: "Personal homepage of Buxin Tu, a Ph.D. student in Computer Science at the University of Pittsburgh."
+# Canonical address of the published site. Used for the sitemap, canonical links, and social previews.
+url: "https://turbothinking.cn"
 baseurl: ""
 lang: "en"
 timezone: "Asia/Shanghai"
-repository: "tubuxinnb/buxin.github.io"
+repository: "tubuxinnb/tubuxinnb.github.io"
 email: "tubuxin0621@gmail.com"
 
 author:
   name: "Buxin Tu"
-  position: "M.S. Student in Computer Science and Technology"
-  affiliation: "University of Science and Technology of China"
-  department: "School of Computer Science and Technology"
-  advisor: "Advisor: Prof. Hong An"
+  position: "Ph.D. Student in Computer Science"
+  affiliation: "University of Pittsburgh"
+  department: "Department of Computer Science"
+  advisor: "Advisor: Prof. Xulong Tang"
   location: ""
   short_bio: ""
-  bio: "I am Buxin Tu, an M.S. student in Computer Science and Technology at the University of Science and Technology of China, advised by Prof. Hong An. My work focuses on computer architecture and high-performance computing, and I am also interested in LLM systems and the use of LLMs for architecture research."
   research_interests:
     - Memory Systems
     - LLM for Arch
@@ -29,6 +30,7 @@ style_mode: "piech" # piech / hewitt / bingyao
 font_style: "sans" # serif / sans / mixed
 accent_color: "#6f7c8b"
 
+# Section switches. `projects` and `teaching` also control whether their pages are built.
 show:
   news: false
   projects: false
@@ -46,9 +48,8 @@ home:
 
 avatar: "/assets/images/Buxin.jpeg"
 logo: "/assets/images/Buxin.jpeg"
-image: "/assets/images/og-card.svg"
-default_social_image: "/assets/images/og-card.svg"
-footer_text: "© 2026 Buxin Tu. Built with Codex and GitHub Pages."
+# Rendered after "© <year> <name>." in the footer.
+footer_text: "Built with Codex and GitHub Pages."
 
 # Keep this list ordered; it is rendered directly in the homepage header.
 social_links:
@@ -79,13 +80,24 @@ defaults:
       path: ""
     values:
       layout: page
-      image: "/assets/images/og-card.svg"
+      # Link-preview card. Regenerate it when the name, position, or affiliation changes.
+      image:
+        path: "/assets/images/og-card.png"
+        width: 1200
+        height: 630
+        alt: "Buxin Tu, Ph.D. Student in Computer Science at the University of Pittsburgh"
 
 sass:
   style: compressed
+  sourcemap: development
 
+# Repository tooling that should not be published with the site.
 exclude:
+  - README.md
+  - Dockerfile
+  - docker-compose.yml
+  - docker
+  - Gemfile
+  - Gemfile.lock
   - vendor
   - node_modules
-  - package.json
-  - package-lock.json

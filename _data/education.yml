@@ -1,3 +1,13 @@
+# Education entries, newest first.
+- section: "Education"
+  title: "Ph.D. in Computer Science"
+  organization: "University of Pittsburgh"
+  location: "Pittsburgh, PA, USA"
+  period: "2026 - Present"
+  home_featured: true
+  bullets:
+    - "Advisor: Prof. Xulong Tang."
+
 - section: "Education"
   title: "M.S. in Computer Science and Technology"
   organization: "University of Science and Technology of China (USTC)"
