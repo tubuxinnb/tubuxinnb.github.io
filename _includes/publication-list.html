@@ -4,15 +4,28 @@
   {% assign show_abstracts = site.show.publication_abstracts %}
 {% endif %}
 {% assign compact = include.compact | default: false %}
+{% assign has_equal_contribution = false %}
 
 <ol class="publication-list{% if compact %} publication-list--compact{% endif %}">
   {% for publication in publications %}
     {% assign highlighted_name = '<strong>' | append: site.author.name | append: '</strong>' %}
     {% assign authors_display = publication.authors | replace: site.author.name, highlighted_name %}
+    {% if publication.authors contains "*" %}
+      {% assign has_equal_contribution = true %}
+    {% endif %}
+    {% comment %}Empty strings are truthy in Liquid, so blank link fields must be checked explicitly.{% endcomment %}
+    {% assign has_code = false %}
+    {% if publication.code_link and publication.code_link != "" %}
+      {% assign has_code = true %}
+    {% endif %}
+    {% assign has_slides = false %}
+    {% if publication.ppt_link and publication.ppt_link != "" %}
+      {% assign has_slides = true %}
+    {% endif %}
     <li class="publication">
       <article>
         <h3 class="publication__title">
-          {% if publication.paper_link %}
+          {% if publication.paper_link and publication.paper_link != "" %}
             <a href="{{ publication.paper_link }}">{{ publication.title }}</a>
           {% else %}
             {{ publication.title }}
@@ -22,13 +35,21 @@
         <p class="publication__venue">
           <span>{{ publication.venue }}</span>
         </p>
-        {% if publication.ppt_link %}
+        {% if has_code or has_slides %}
           <p class="item-links">
-            {% if publication.ppt_link %}<a href="{{ publication.ppt_link }}">Slide</a>{% endif %}
+            {% if has_code %}<a href="{{ publication.code_link }}">Code</a>{% endif %}{% if has_code and has_slides %}<span class="dot-separator">·</span>{% endif %}{% if has_slides %}<a href="{{ publication.ppt_link }}">Slides</a>{% endif %}
           </p>
+        {% endif %}
+        {% if show_abstracts and publication.abstract and publication.abstract != "" %}
+          <details class="publication__details">
+            <summary>Abstract</summary>
+            <p class="publication__abstract">{{ publication.abstract }}</p>
+          </details>
         {% endif %}
       </article>
     </li>
   {% endfor %}
 </ol>
-<p class="publication-note">* equal contribution.</p>
+{% if has_equal_contribution %}
+  <p class="publication-note">* equal contribution.</p>
+{% endif %}

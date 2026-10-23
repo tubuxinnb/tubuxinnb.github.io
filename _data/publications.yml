@@ -1,5 +1,7 @@
 # Keep publications in reverse-chronological order.
-# `selected: true` controls the homepage list.
+# Fields: title, authors (mark equal contribution with *), venue, year,
+# paper_link, code_link, ppt_link, and an optional abstract.
+# Empty links are hidden. `selected: true` controls the homepage list.
 - title: "NDPage: Efficient Address Translation for Near-Data Processing Architectures via Tailored Page Table"
   authors: "Qingcai Jiang*, Buxin Tu*, and Hong An"
   venue: "DATE 2025. The 28th Design, Automation and Test in Europe Conference"

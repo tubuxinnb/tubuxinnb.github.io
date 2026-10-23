@@ -1,6 +1,7 @@
 ---
 title: Projects
-intro: "Projects maintained in `_data/projects.yml`."
+# Entries live in _data/projects.yml. The page is only built when `show.projects` is true.
+feature_flag: projects
 ---
 
 {% if site.data.projects.size > 0 %}

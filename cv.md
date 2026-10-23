@@ -1,6 +1,5 @@
 ---
 title: CV
-intro: "A concise CV page. A PDF version can be added later."
 ---
 
 ## Current affiliation

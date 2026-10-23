@@ -1,6 +1,6 @@
 ---
 title: Publications
-intro: "Publications maintained in `_data/publications.yml`."
+# Entries live in _data/publications.yml.
 ---
 
 {% if site.data.publications.size > 0 %}
