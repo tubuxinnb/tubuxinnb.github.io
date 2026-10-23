@@ -11,10 +11,9 @@ ENV LANG=C.UTF-8 \
 
 WORKDIR /site
 
-RUN gem install bundler:2.4.22
-
+# Bundler switches itself to the version recorded under BUNDLED WITH in Gemfile.lock.
 COPY Gemfile Gemfile.lock ./
-RUN bundle _2.4.22_ install
+RUN bundle install
 
 COPY docker/serve.sh /usr/local/bin/serve-jekyll
 RUN chmod +x /usr/local/bin/serve-jekyll
