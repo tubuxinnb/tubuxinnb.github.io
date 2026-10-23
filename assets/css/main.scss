@@ -291,6 +291,12 @@ select {
   fill: currentColor;
 }
 
+.hero__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

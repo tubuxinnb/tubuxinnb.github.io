@@ -28,12 +28,13 @@ layout: default
       <p class="hero__summary">{{ site.author.short_bio }}</p>
     {% endif %}
     <div class="hero__meta">
-      <a class="social-links__link social-links__link--icon" href="mailto:{{ site.email }}" aria-label="Email">
+      {% comment %}The address is shown as name_AT_domain and never linked, so the plain address stays off the page.{% endcomment %}
+      <span class="hero__email">
         <svg class="social-links__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
           <path d="M1.75 3.5h12.5c.41 0 .75.34.75.75v7.5a.75.75 0 0 1-.75.75H1.75a.75.75 0 0 1-.75-.75v-7.5c0-.41.34-.75.75-.75Zm0 1.2v.24L8 8.9l6.25-3.96V4.7H1.75Zm12.5 1.66L8.4 10.07a.75.75 0 0 1-.8 0L1.75 6.36v5.39h12.5V6.36Z"></path>
         </svg>
-        <span class="visually-hidden">Email</span>
-      </a>
+        <span class="visually-hidden">Email: </span>{{ site.email | replace: "@", "_AT_" }}
+      </span>
       {% include social-links.html inline=true %}
       {% if site.author.location and site.author.location != "" %}
         <span class="dot-separator">·</span>

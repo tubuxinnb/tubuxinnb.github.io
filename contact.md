@@ -7,7 +7,7 @@ I am happy to connect about LLM systems, computer architecture, and related proj
 
 ## Contact
 
-- Email: [{{ site.email | replace: "@", "_AT_" }}](mailto:{{ site.email }})
+- Email: {{ site.email | replace: "@", "_AT_" }}
 {% if site.author.department and site.author.department != "" and site.author.affiliation and site.author.affiliation != "" %}
 - Affiliation: {{ site.author.department }}, {{ site.author.affiliation }}
 {% elsif site.author.department and site.author.department != "" %}

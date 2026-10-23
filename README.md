@@ -20,6 +20,7 @@ A few conventions:
 
 - Publications are listed newest first. Mark equal contribution with `*` in `authors` and the footnote appears automatically. Empty `code_link` / `ppt_link` fields are hidden, and `selected: true` also shows a paper on the homepage.
 - Education and experience entries with `home_featured: true` appear on the homepage; every entry appears on the CV page.
+- The email address is displayed as `name_AT_domain` and is deliberately not a `mailto:` link, so the plain address never appears on the site.
 - Sections are switched on and off under `show:` in `_config.yml`. For `projects` and `teaching` the switch also decides whether the page is built at all (see `_plugins/feature_flags.rb`).
 - `assets/images/og-card.png` is the 1200×630 preview image shown when a link to the site is shared. It is a static image, so regenerate it whenever the name, position, or affiliation changes.
 
