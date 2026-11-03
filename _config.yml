@@ -20,7 +20,7 @@ author:
   location: ""
   short_bio: ""
   research_interests:
-    - Agentic Serving Systems
+    - Agentic LLM Serving Systems
     - Context Engineering
 
 # Visual tuning. The CSS reads these values and applies one of three calibrated modes.
