@@ -50,6 +50,9 @@ avatar: "/assets/images/Buxin.jpeg"
 logo: "/assets/images/Buxin.jpeg"
 # Rendered after "© <year> <name>." in the footer.
 footer_text: "Built with Codex and GitHub Pages."
+# GoatCounter site code; statistics live at https://buxintu.goatcounter.com.
+# The counting script is only added to production builds, so local previews are not counted.
+goatcounter: "buxintu"
 
 # Keep this list ordered; it is rendered directly in the homepage header.
 social_links:

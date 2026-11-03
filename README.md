@@ -22,6 +22,7 @@ A few conventions:
 - Education and experience entries with `home_featured: true` appear on the homepage; every entry appears on the CV page.
 - The email address is displayed as `name_AT_domain` and is deliberately not a `mailto:` link, so the plain address never appears on the site.
 - Sections are switched on and off under `show:` in `_config.yml`. For `projects` and `teaching` the switch also decides whether the page is built at all (see `_plugins/feature_flags.rb`).
+- Visitor statistics are collected by GoatCounter and viewed at https://buxintu.goatcounter.com. The site code is `goatcounter` in `_config.yml`, and the script is only included in production builds, so local previews are not counted.
 - `assets/images/og-card.png` is the 1200×630 preview image shown when a link to the site is shared. It is a static image, so regenerate it whenever the name, position, or affiliation changes.
 
 ### Local preview with Docker (recommended)
