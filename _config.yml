@@ -20,10 +20,8 @@ author:
   location: ""
   short_bio: ""
   research_interests:
-    - Memory Systems
-    - LLM for Arch
-    - Near-Data Processing
-    - LLM systems
+    - Agentic Serving Systems
+    - Context Engineering
 
 # Visual tuning. The CSS reads these values and applies one of three calibrated modes.
 style_mode: "piech" # piech / hewitt / bingyao
@@ -83,7 +81,7 @@ defaults:
       path: ""
     values:
       layout: page
-      # Link-preview card. Regenerate it when the name, position, or affiliation changes.
+      # Link-preview card. Regenerate it when the name, position, affiliation, or research interests change.
       image:
         path: "/assets/images/og-card.png"
         width: 1200
