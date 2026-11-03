@@ -36,7 +36,7 @@ show:
   profile_photo: true
   publication_abstracts: false
   selected_publications_on_home: true
-  experience: true
+  experience: false # Education & Experience section on the homepage (the CV page always lists it)
   dark_mode: false
 
 home:

@@ -3,8 +3,6 @@ title: Contact
 intro: "Contact details and a few practical notes."
 ---
 
-I am happy to connect about agentic LLM serving systems, context engineering, computer architecture, and related projects.
-
 ## Contact
 
 - Email: {{ site.email | replace: "@", "_AT_" }}
